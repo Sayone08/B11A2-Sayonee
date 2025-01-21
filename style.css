@@ -1,32 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
-.fira-sans-quick{
-    font-family: "Fira Sans", serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.quicksand-normal{
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
+  }
 
-.fira-sans-rale {
-    font-family: "Fira Sans", serif;
-    font-weight: 400;
+  .raleway-normal {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-}
+  }
 
 /* shared style */
 *{
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: rgba(247, 247, 247, 1);
+}
 .display{
     display: flex;
 }
-body{
+header, .standard{
     max-width: 1160px;
     margin: 0 auto;
-    background-color: rgba(247, 247, 247, 1);
+}
+.shared-title{
+    font-size: 2.87rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 60px;
+}
+.subtitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.shared-para{
+    text-align: center;
 }
 
 
@@ -98,7 +115,7 @@ header > hr{
 }
 .banner-left > h1{
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: bold;
     max-width: 550px;
 }
 .banner-left > p{
@@ -113,15 +130,89 @@ header > hr{
     padding: 10px 47px;
 }
 
+/* Standard style */
+.bg-img{
+    background-image: url("assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.standard-card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 28.29px;
+    padding: 80px 0px;
+}
+
+.standard-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 52px 40px;
+    border-radius: 18.86px;
+    gap: 33px;
+    max-height: 481.5px;
+}
+.one{
+    background: linear-gradient(to bottom, #DEF5FF 0%, #FFFFFF 40%); 
+    border: 0.94px solid #DEF5FF;
+    box-shadow: inset 0px 0px 28.3px rgba(0, 0, 0, 0.05);
+}
+.two{
+    background: linear-gradient(to bottom, #FFF4DC 0%, #FFFFFF 40%); 
+    border: 0.94px solid #FFF4DC;
+    box-shadow: inset 0px 0px 28.3px rgba(0, 0, 0, 0.05);
+}
+.three{
+    background: linear-gradient(to bottom, #EEE1FF 0%, #FFFFFF 40%); 
+    border: 0.94px solid #F2E8FF ;
+    box-shadow: inset 0px 0px 28.3px rgba(0, 0, 0, 0.05);
+}
+
+.standard-cards > a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 60px;
+}
+.right-arrow, .left-arrow{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgba(254, 163, 1, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-chevron-right{
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 576px) {
     nav{
         margin: 12px 0px;
     }
-    .list, .primary-btn, .logo>h3{
+    .list, .primary-btn, .logo>h3, .slider{
         display: none;
     }
-    header{
+    header,section{
         margin: 0px 17px;
     }
     .fa-bars{
@@ -160,6 +251,29 @@ header > hr{
     }
     .btn{
         font-size: 1rem;
+    }
+    .standard-cards{
+        gap: 22px;
+        justify-items: center;
+    }
+    .standard-card-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 12.3px;
+        padding: 20px 0px;
+    }
+    .shared-title{
+        font-size: 1.5rem;
+        padding-top: 40px;
+    }
+    .subtitle{
+        font-size: 1rem;
+    }
+    .shared-para{
+        font-size: 0.625rem;
+    }
+    .bg-img{
+        background-size: contain;
+        background-position: center;
     }
     
 }
