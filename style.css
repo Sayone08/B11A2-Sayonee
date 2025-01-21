@@ -28,7 +28,7 @@ body{
 .display{
     display: flex;
 }
-header, .standard{
+header, .standard, .marquee-scroll{
     max-width: 1160px;
     margin: 0 auto;
 }
@@ -45,7 +45,9 @@ header, .standard{
 .shared-para{
     text-align: center;
 }
-
+header{
+    margin-bottom: 30px;
+}
 
 /* nav style */
 nav{
@@ -130,6 +132,17 @@ header > hr{
     padding: 10px 47px;
 }
 
+
+/* marquee-scroll */
+
+.marquee-scroll{
+    background-color: #01ACFD;
+    padding: 10px;
+}
+marquee{
+    font-weight: bold;
+    color: #FFFFFF;
+}
 /* Standard style */
 .bg-img{
     background-image: url("assets/bg.png");
