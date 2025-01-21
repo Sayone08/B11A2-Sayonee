@@ -279,6 +279,9 @@ footer{
     header,section{
         margin: 0px 17px;
     }
+    header{
+        margin-bottom: 30px;
+    }
     .fa-bars{
         display: block;
         font-size: 1.5rem;
