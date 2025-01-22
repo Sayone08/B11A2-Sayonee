@@ -471,10 +471,17 @@ footer{
             "cardbox4 cardbox5";
     }
     .context{
-        padding-left: 23px;
-        padding-right: 23px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .stories{
         gap: 40px;
+    }
+    .head2{
+        font-size: 0.7rem;
+    }
+    .card-btn1,.card-btn2{
+        font-size: 0.5rem;
+        top: -16px;
     }
 }
