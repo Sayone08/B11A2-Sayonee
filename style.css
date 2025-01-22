@@ -350,6 +350,8 @@ footer{
 }
 
 
+
+/* Responsive only for mobile device */
 @media screen and (max-width: 576px) {
     nav{
         margin: 12px 0px;
