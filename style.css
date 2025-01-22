@@ -10,7 +10,7 @@
     font-style: normal;
   }
 
-  .raleway-normal {
+.raleway-normal {
     font-family: "Raleway", serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -28,7 +28,7 @@ body{
 .display{
     display: flex;
 }
-header, .standard, .marquee-scroll{
+header, .standard, .marquee-scroll,.stories{
     max-width: 1160px;
     margin: 0 auto;
 }
@@ -101,9 +101,8 @@ header > hr{
     width: 100%;
     background: rgba(254, 163, 1, 1) ;
 }
-.fa-bars{
+nav > img{
     display: none;
-    font-size: 2rem;
 }
 
 /* banner style */
@@ -131,6 +130,7 @@ header > hr{
     background-color: rgba(17, 17, 17, 1);
     padding: 10px 47px;
 }
+
 
 
 /* marquee-scroll */
@@ -268,6 +268,87 @@ footer{
 
 
 
+/* Stories Style */
+.stories{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 60px;
+}
+.stories-container{
+    background: url(assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%); 
+}
+.cardbox1{
+    grid-area: cardbox1;
+}
+.cardbox2{
+    grid-area: cardbox2;
+    max-height: 301px;
+}
+.cardbox3{
+    grid-area: cardbox3;
+    max-height: 301px;
+}
+.cardbox4{
+    grid-area: cardbox4;
+    max-height: 301px;
+}
+.cardbox5{
+    grid-area: cardbox5;
+    max-height: 301px;
+}
+.cardbox-container{
+    display: grid;
+    grid-template-areas: 
+    "cardbox1 cardbox1 cardbox2 cardbox3"
+    "cardbox1 cardbox1 cardbox4 cardbox5";
+    gap: 18.3px;
+    max-height: 630px;
+}
+.cards{
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+.context{
+    padding: 0px 38.35px 28px;
+}
+.card-img{
+    width: 100%;
+    border-radius: 16px 16px 0px 0px;
+}
+.cards-head{
+    font-size: 1.5 rem;
+}
+.card-btn1,.card-btn2{
+    padding: 14px 19px;
+    border: none;
+    border-radius: 47.93px;
+    color: #FFFFFF;
+    background-color: #95B226;
+    position: relative;
+    top: -23px;
+}
+.card-btn2{
+    padding: 9px 19px;
+    top: -20px;
+}
+.card-para{
+    font-weight: 300;
+    margin: 47.93px 0px 34.52px;
+    color: #666666;
+    line-height: 1.8rem;
+}
+.head1{
+    font-size: 1.5rem;
+    margin-top: 2.88px;
+}
+.head2{
+    font-size: 1rem;
+    padding-top: -10px;
+}
+
 
 @media screen and (max-width: 576px) {
     nav{
@@ -276,15 +357,14 @@ footer{
     .list, .primary-btn, .logo>h3, .slider{
         display: none;
     }
-    header,section{
+    header, .standard, .stories{
         margin: 0px 17px;
     }
     header{
         margin-bottom: 30px;
     }
-    .fa-bars{
+    nav > img{
         display: block;
-        font-size: 1.5rem;
     }
     .logo>img{
         width: 46px;
@@ -292,6 +372,8 @@ footer{
     header > hr{
         display: block;
         width: 100%;
+        border: none;
+        height: 1px;
         background-color: rgba(254, 163, 1, 1);
     }
     .banner{
@@ -374,5 +456,23 @@ footer{
     }
     .sec2 > h5, .sec3 > h5{
         font-size: 1.27rem;
+    }
+    .cardbox1{
+        display: none;
+    }
+    .cardbox-container{
+        gap: 8px;
+    }
+    .cardbox-container {
+        grid-template-areas:
+            "cardbox2 cardbox3"
+            "cardbox4 cardbox5";
+    }
+    .context{
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+    .stories{
+        gap: 40px;
     }
 }
